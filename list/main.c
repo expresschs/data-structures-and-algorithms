@@ -50,9 +50,9 @@ static void print_slist(sl_list_t *list)
 static void print_dlist(dl_list_t* list)
 {
     dl_node *node = NULL;
-    for (node = (dl_node*)sl_peek(list);
+    for (node = (dl_node*)dl_peek(list);
         node != NULL;
-        node = (dl_node*)sl_next((dl_entry_t*)node)) {
+        node = (dl_node*)dl_next((dl_entry_t*)node)) {
         printf("%s ", node->data.name);
     }
     printf("\n");
